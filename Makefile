@@ -15,7 +15,7 @@ $(target_build_dir)/main.o : main.c
 
 $(target_build_dir)/utils.o : utils.c
 	cc -c utils.c
-	mv utils.o $(target_build_dir)/
+	mv utils.o $(target_build_dir)
 
 .PHONY : clean
 clean :
