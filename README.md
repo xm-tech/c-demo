@@ -9,3 +9,4 @@
 - c db op
 - c mq
 - c-lua
+- c chess demo
