@@ -1,4 +1,8 @@
-#include <stdio.h>
+#include <stdio.h> // 引入标准库
+
+#include "math-me.h"
+
+
 static int count = 10;
 
 void work();
@@ -14,8 +18,10 @@ int main(){
 
 
 
-void work(void){
+void work(int argc, int *argv){
 	static int c = 5;
-	c++;
+	c = incr(c);
+	/* c++; */
+
 	printf("count:%d,c:%d \n", count, c);
 }
