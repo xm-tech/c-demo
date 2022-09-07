@@ -1,6 +1,6 @@
 #include <stdio.h> // 引入标准库
 
-#include "math-me.h"
+#include "math-me.h" // 引入自定义头文件
 
 
 static int count = 10;
