@@ -1,6 +1,7 @@
-// 函数声明
 #include <stdio.h>
-int add(int a, int b);
+
+// 函数声明
+int add(int, int);
 
 int main() {
 	int a = 3, b = 5;
