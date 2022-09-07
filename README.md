@@ -1,4 +1,4 @@
-# c study project
+# c examples
 
 
 # TODO
