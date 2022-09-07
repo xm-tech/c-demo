@@ -1,22 +1,22 @@
-objdir = obj
-objects = $(objdir)/main.o $(objdir)/utils.o
+target_build_dir = build
+objects = $(target_build_dir)/main.o $(target_build_dir)/utils.o
 
-all : $(objdir) main
+all : $(target_build_dir) main
 
-$(objdir) : 
+$(target_build_dir) : 
 	mkdir -p $@
 
 main : $(objects)
 	cc -o main $(objects)
 
-$(objdir)/main.o : main.c
+$(target_build_dir)/main.o : main.c
 	cc -c main.c
-	mv main.o $(objdir)
+	mv main.o $(target_build_dir)
 
-$(objdir)/utils.o : utils.c
+$(target_build_dir)/utils.o : utils.c
 	cc -c utils.c
-	mv utils.o $(objdir)/
+	mv utils.o $(target_build_dir)/
 
 .PHONY : clean
 clean :
-	-rm main && rm -rf $(objdir)
+	-rm main && rm -rf $(target_build_dir)
