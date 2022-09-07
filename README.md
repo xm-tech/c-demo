@@ -1,5 +1,8 @@
 # c examples
 
+# build
+
+make all
 
 # TODO
 
