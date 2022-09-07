@@ -3,6 +3,7 @@
 
 # TODO
 
+- c basic lan
 - c net op
 - c file op
 - c db op
