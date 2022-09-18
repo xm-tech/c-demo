@@ -7,6 +7,8 @@ make all
 # TODO
 
 - c basic lan
+- c struct
+- c pointer
 - c net op
 - c file op
 - c db op
