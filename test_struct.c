@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-const int MAX_CLASS_STU_NUM = 3;
+#define MAX_CLASS_STU_NUM 3
 
 struct Student {
 	char name[10];
@@ -28,12 +28,12 @@ int main(int argc, char **argv){
 	struct Student maxm = {"maxm", 37, 0, 1000000.33};
 	display_student(maxm);
 	struct Student lfj = {"lfj", 37, 1, 1000000.33};
-	display_student(maxm);
+	display_student(lfj);
 	struct Student wsr = {"wsr", 35, 1, 1000000.33};
-	display_student(maxm);
+	display_student(wsr);
 	struct Student tq = {"tq", 35, 1, 1000000.33};
 	display_student(tq);
-	
+
 	struct Class *classA = malloc(sizeof(struct Class));
 	classA->stu_num = 0;
 	classA->name = "高三1班";
@@ -44,7 +44,7 @@ int main(int argc, char **argv){
 }
 
 void display_student(struct Student stu) {
-	printf("Student{name:\"%s\", age:%d, sex:%d, money:%lf}\n", stu.name, stu.age, stu.sex, stu.money);
+	printf("Student{name:\"%s\", age:%d, sex:%d, money:%.2f}\n", stu.name, stu.age, stu.sex, stu.money);
 }
 
 void join_class(struct Class *cl, struct Student stu) {
