@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "types.h"
+
 #define MAX_CLASS_STU_NUM 3
 
 struct student {
@@ -13,7 +15,7 @@ struct student {
 
 // 班级
 struct clazz {
-	char *name;
+	String name; // same as char *name
 	struct student students[MAX_CLASS_STU_NUM];
 	int stu_num;
 };
