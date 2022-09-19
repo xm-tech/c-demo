@@ -4,7 +4,7 @@
 
 #define MAX_CLASS_STU_NUM 3
 
-struct Student {
+struct student {
 	char name[10];
 	int age;
 	int sex;
@@ -12,29 +12,29 @@ struct Student {
 };
 
 // 班级
-struct Class {
+struct clazz {
 	char *name;
-	struct Student students[MAX_CLASS_STU_NUM];
+	struct student students[MAX_CLASS_STU_NUM];
 	int stu_num;
 };
 
 
-void display_student(struct Student stu);
+void display_student(struct student stu);
 
 // 某个学生加入某个班级
-void join_class(struct Class *cl, struct Student stu);
+void join_class(struct clazz *cl, struct student stu);
 
 int main(int argc, char **argv){
-	struct Student maxm = {"maxm", 37, 0, 1000000.33};
+	struct student maxm = {"maxm", 37, 0, 1000000.33};
 	display_student(maxm);
-	struct Student lfj = {"lfj", 37, 1, 1000000.33};
+	struct student lfj = {"lfj", 37, 1, 1000000.33};
 	display_student(lfj);
-	struct Student wsr = {"wsr", 35, 1, 1000000.33};
+	struct student wsr = {"wsr", 35, 1, 1000000.33};
 	display_student(wsr);
-	struct Student tq = {"tq", 35, 1, 1000000.33};
+	struct student tq = {"tq", 35, 1, 1000000.33};
 	display_student(tq);
 
-	struct Class *classA = malloc(sizeof(struct Class));
+	struct clazz *classA = malloc(sizeof(struct clazz));
 	classA->stu_num = 0;
 	classA->name = "高三1班";
 	join_class(classA, maxm);
@@ -43,11 +43,11 @@ int main(int argc, char **argv){
 	join_class(classA, tq);
 }
 
-void display_student(struct Student stu) {
-	printf("Student{name:\"%s\", age:%d, sex:%d, money:%.2f}\n", stu.name, stu.age, stu.sex, stu.money);
+void display_student(struct student stu) {
+	printf("student{name:\"%s\", age:%d, sex:%d, money:%.2f}\n", stu.name, stu.age, stu.sex, stu.money);
 }
 
-void join_class(struct Class *cl, struct Student stu) {
+void join_class(struct clazz *cl, struct student stu) {
 	if (cl->stu_num >= MAX_CLASS_STU_NUM) {
 		printf("%s join_class %s fail, max student num!!\n", stu.name, cl->name);
 		return;
