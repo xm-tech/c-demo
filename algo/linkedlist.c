@@ -1,4 +1,4 @@
-
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,6 +27,9 @@ int remove_end(node_t * head);
 
 // 删除1指定索引位置的节点
 int remove_index_node(node_t * head, int index);
+
+// 查找是否包含某个值
+bool search(node_t * head, int val);
 
 // iterate a linkedlist
 void display(node_t * head) {
