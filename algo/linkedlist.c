@@ -11,7 +11,7 @@ typedef struct node {
 void display(node_t * head);
 
 // 表头添加
-bool push(node_t * head, int val);
+bool push(node_t ** head, int val);
 
 // 表尾删除
 int pop(node_t * head);
@@ -31,11 +31,11 @@ void display(node_t * head) {
 	}
 }
 
-bool push(node_t * head, int val){
+bool push(node_t ** head, int val){
 	node_t * new = (node_t *)malloc(sizeof(node_t));
 	new->val = val;
-	new->next = head;
-	head = new;
+	new->next = *head;
+	*head = new;
 	return true;
 }
 
@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
 	head->next->val = 2;
 	head->next->next = NULL;
 
-	push(head, 3);
+	push(&head, 3);
 
 	display(head);
 	return 0;	
