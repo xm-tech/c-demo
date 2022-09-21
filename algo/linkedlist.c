@@ -29,7 +29,6 @@ void display(node_t * head) {
 		printf("current.val=%d\n", current->val);
 		current = current->next;
 	}
-	free(current);
 }
 
 bool push(node_t * head, int val){
