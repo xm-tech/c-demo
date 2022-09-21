@@ -31,7 +31,7 @@ void display(node_t * head) {
 	}
 }
 
-// FIXME while only ** effective here
+// FIXME why only ** effective here
 bool push(node_t ** head, int val){
 	node_t * new = malloc(sizeof(node_t));
 	new->val = val;
