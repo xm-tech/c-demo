@@ -32,7 +32,7 @@ void display(node_t * head) {
 }
 
 bool push(node_t ** head, int val){
-	node_t * new = (node_t *)malloc(sizeof(node_t));
+	node_t * new = malloc(sizeof(node_t));
 	new->val = val;
 	new->next = *head;
 	*head = new;
@@ -40,7 +40,7 @@ bool push(node_t ** head, int val){
 }
 
 int main(int argc, char **argv) {
-	node_t * head = (node_t *)malloc(sizeof(node_t));
+	node_t * head = malloc(sizeof(node_t));
 	head->val=1;
 	head->next = (node_t *)malloc(sizeof(node_t));
 	head->next->val = 2;
