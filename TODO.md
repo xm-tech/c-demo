@@ -1,3 +1,5 @@
+# TODOLIST
+
 [x] typedef
 [x] pointer
 [x] funciton pointer
@@ -6,3 +8,4 @@
 [ ] stdlib.h
 [ ] tcp
 [ ] algorithm
+[ ] separate algo into a new project
