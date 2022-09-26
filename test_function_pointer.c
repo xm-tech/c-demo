@@ -13,7 +13,8 @@ int sub_(int a, int b) {
 	return c;
 };
 
-int call_func(func p, int a, int b) {
+// static means this function can only be accessed from the current file
+static int call_func(func p, int a, int b) {
 	printf("call_func: a=%d,b=%d\n", a, b);
 	return p(a, b);
 }
