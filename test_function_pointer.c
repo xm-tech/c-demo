@@ -19,17 +19,17 @@ int call_func(func p, int a, int b) {
 }
 
 int main(){
-	func p;
-	p = &add_;
-	int r = p(3, 5);
+	func f;
+	f = &add_;
+	int r = f(3, 5);
 	printf("r=%d\n", r);
 
-	p = &sub_;
-	r = p(3, 5);
+	f = &sub_;
+	r = f(3, 5);
 	printf("r=%d\n", r);
 
 	// skynet 的函数调用好多都是这么做的
-	int v = call_func(p, 11, 3);
+	int v = call_func(f, 11, 3);
 	printf("v=%d\n", v);
 }
 
