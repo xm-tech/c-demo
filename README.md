@@ -9,6 +9,7 @@ make all
 - [x] c basic lan
 - [x] c struct
 - [x] c pointer
+- [x] function pointer
 - c net op
 - c file op
 - c db op
