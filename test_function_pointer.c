@@ -1,13 +1,13 @@
 #include "test_function_pointer.h"
 #include <stdio.h>
 
-int add_(int a, int b){
+static int add_(int a, int b){
 	int c = a + b;
 	printf("add_(%d,%d)=%d\n", a, b, c);
 	return c;	
 };
 
-int sub_(int a, int b) {
+static int sub_(int a, int b) {
 	int c = a - b;
 	printf("sub_(%d,%d)=%d\n", a, b, c);
 	return c;

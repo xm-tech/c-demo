@@ -30,10 +30,10 @@ typedef struct {
 	int stu_num;
 } clazz;
 
-void display_student(student *stu);
+static void display_student(student *stu);
 
 // 某个学生加入某个班级
-void join_class(clazz *cl, student *stu);
+static void join_class(clazz *cl, student *stu);
 
 int main(int argc, char **argv){
 	student maxm = {{"maxm", 37, 0}, 79};
@@ -58,11 +58,11 @@ int main(int argc, char **argv){
 	join_class(classA, &tq);
 }
 
-void display_student(student *stu) {
+static void display_student(student *stu) {
 	printf("student{name:\"%s\", age:%d, sex:%d, score:%.2f} \n", stu->per.name, stu->per.age, stu->per.sex, stu->score);
 }
 
-void join_class(clazz *cl, student *stu) {
+static void join_class(clazz *cl, student *stu) {
 	if (cl->stu_num >= MAX_CLASS_STU_NUM) {
 		printf("%s join_class {%s} fail, max student num: %d \n", stu->per.name, cl->name, MAX_CLASS_STU_NUM);
 		return;
