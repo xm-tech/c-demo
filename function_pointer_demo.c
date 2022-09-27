@@ -1,4 +1,4 @@
-#include "test_function_pointer.h"
+#include "function_pointer_demo.h"
 #include <stdio.h>
 
 static int add_(int a, int b){
