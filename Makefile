@@ -18,7 +18,10 @@ $(target_build_dir)/utils.o : utils.c
 	cc -c utils.c
 	mv utils.o $(target_build_dir)
 
+run :
+	./main
+
 # clean 是1伪目标(不会生成文件)
 .PHONY : clean
 clean :
-	-rm main && rm -rf $(target_build_dir)
+	-rm main && rm -rf $(target_build_dir) && rm -f a.out
