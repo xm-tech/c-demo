@@ -8,6 +8,7 @@ $(target_build_dir) :
 
 # main 是目标文件， $(objects)是依赖文件， cc -o main $(objects) 是生成目标的方法
 main : $(objects)
+	# or cc -o main $^
 	cc -o main $(objects)
 
 $(target_build_dir)/main.o : main.c
