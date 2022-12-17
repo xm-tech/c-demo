@@ -9,7 +9,7 @@ so that we can emit the path info about .h files in the **#include** directives
 always begins the .h file with ifndef FILENAME_H_
 -------------------------------------------------
 
-to avoid redundant include errors
+to prevent redundant include errors
 
 use **//** comments anywhere, never **/\* ... \*/**
 -------------------------------------------------
