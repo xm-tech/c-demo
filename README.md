@@ -1,18 +1,22 @@
-# c examples
+c examples
+==========
 
-## build
+build
+-----
 
 ```shell
 make all
 ```
 
-## The Course
+The Course
+----------
 
 - [site](https://www.runoob.com/cprogramming/c-tutorial.html)
 
 - [Progress](https://www.runoob.com/cprogramming/c-functions.html)
 
-## tips
+tips
+----
 
 > about static
 
@@ -21,9 +25,10 @@ make all
 /**
 In C, functions are global by default. 
 
-Unlike global functions in C, access to static functions is restricted to the file where they are declared. 
-Therefore, when we want to restrict access to functions, we make them static. 
-Another reason for making functions static can be reuse of the same function name in other files.
+Unlike global functions in C, access to static functions is restricted to the 
+file where they are declared. Therefore, when we want to restrict access to 
+functions, we make them static. Another reason for making functions static can 
+be reuse of the same function name in other files.
 
 */
 static void f(); // 这里的 static 说明此 f 函数只在当前文件可见
@@ -41,3 +46,11 @@ pointer referred to a function
 sutiable to be used as a param of a function to implement interface like things
 
 ```
+
+> const
+
+....
+
+> inline function
+
+....
