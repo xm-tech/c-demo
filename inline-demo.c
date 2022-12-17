@@ -17,8 +17,8 @@
  */
 static inline unsigned long now() { return (unsigned long)time(NULL); }
 
-static inline int add(int a, int b) {
-	printf("call add(%d,%d)\n", a, b);
+static inline int add1(int a, int b) {
+	printf("call add1(%d,%d)\n", a, b);
 	return a + b;
 }
 
@@ -27,7 +27,7 @@ static void with_inline_func() {
 	register unsigned long begin = now();
 	for (int i = 0; i < 1000; i++) {
 		for (int j = 0; j < 1000; j++) {
-			add(i, j);
+			add1(i, j);
 		}
 	}
 	register unsigned long end = now();

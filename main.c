@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 此处 extern 标明方法的定义在另外的源文件中
 extern int add(int, int);
 extern int incr(int);
 
