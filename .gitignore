@@ -5,3 +5,4 @@ build
 main
 .DS_Store
 char_demo
+a.out.dSYM

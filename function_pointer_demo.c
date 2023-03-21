@@ -32,5 +32,14 @@ int main(){
 	// skynet 的函数调用好多都是这么做的
 	int v = call_func(f, 11, 3);
 	printf("v=%d\n", v);
+
+	int n = 10;
+	void* ptr = &n;
+	printf("*ptr=%d\n", *(int*)ptr);
+
+	char* c = "hello c";
+	printf("c=%s\n", c);
+	ptr = c;
+	printf("*ptr=%s\n", (char*)ptr);
 }
 
