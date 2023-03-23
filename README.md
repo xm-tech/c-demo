@@ -42,8 +42,18 @@ static struct global_quene * Q=null
 > funciton pointer
 
 ```c
+/**
 pointer referred to a function
 sutiable to be used as a param of a function to implement interface like things
+*/
+
+// 这里 func 是指向函数的指针, 要求被引用的函数返回值是 void, 参数为空
+void (*func)();
+
+int (*func)(int, int);
+
+void* (*func)(void*, void*);
+
 
 ```
 
