@@ -4,7 +4,8 @@ build :
 	gcc -o demo $(src) -lpthread 
 
 run :
-	./demo
+	# make run name=maxm age=10
+	./demo ${name} ${age}
 
 .PHONY : clean
 clean :
